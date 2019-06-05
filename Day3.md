@@ -196,6 +196,32 @@ dir(webbrowser)
 data = input("Enter your search term")
 webbrowser.open_new_tab('https://www.google.com/search?q='+data)
 ```
+### To create a file with same text repeatedly until you stop it
+Here we use ```yes``` command to do this.
+```
+yes My name is Akshay Bengani
+My name is Akshay Bengani
+My name is Akshay Bengani
+..
+```
+### Tar and compression
+To compress a file we use tar in linux
+```
+tar -fcv tarfilename.tar file1.txt file2.txt filen.txt
+```
+```-f``` Forcefully<br>
+```-c``` Create Tar<br>
+```-v``` Verbose the operation <br>
+```
+tar -czvf tarfilname.tar.gz file1.txt file2.txt fil3.txt
+```
+```-z``` This is for compression
+```.gz``` This is the compression format
+
+
+
+
+
 
 
 
