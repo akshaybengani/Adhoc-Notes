@@ -1,5 +1,6 @@
 # Day 3
 
+
 ### Why to work on open source projects
 If you have some idea which you want to build and many times you dont have much resources to do this alone then you can go with open source.
 
@@ -22,6 +23,7 @@ HOME_URL="https://www.kali.org/"
 SUPPORT_URL="https://forums.kali.org/"
 BUG_REPORT_URL="https://bugs.kali.org/"
 ```
+
 ### Redhat system information
 ```
 cat /etc/os-release

@@ -100,4 +100,26 @@ chmod +t /project
 ```
 chmod g+s /project
 ```
-*   
+
+## Installation and Setup of Jupyter
+*   Instance Launch
+*   putty / terminal -- ssh --firewall --aws
+*   python3 install pip3 install
+*   apt-get install python python3 python-pip python3-pip
+*   pip3 install jupyter
+*   jupyter-notebook --no-browser --ip=0.0.0.0 --port=8888 &>/dev/null &
+*   jupyter-notebook list
+    *   This will give us the tokenID
+
+## Crontab for Job Scheduling
+* Crontab is a program which allows us a background service which will execute something at a partitcular point of time, without any user interaction at that point of time.
+*   To use crontab we use 
+```
+crontab -e
+```
+* ```-e``` will open the vim text editor and we mention the date and time format and then the command location and operation.
+* Crontab date and time format is customizable like if we want to execute something repeatedly multiple times or everytime after a period of time we can use ```*``` for that
+```
+crontab -e
+
+```
