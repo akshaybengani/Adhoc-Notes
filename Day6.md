@@ -72,3 +72,18 @@ Partition table is a memory or a storage which remembers no of partitions size a
 ### Logical Partition
 * There are under Extended partition.
 * In an extened partition we have 60 Logical partition.
+
+# Python Class
+
+```py
+impory sys
+x= sys.argv[1:]
+sum = 0
+for i in x:
+    sum = sum + int(i)
+print(sum)
+```
+```
+$python sum.py 1 5351 8453 465 3554 454 3
+354015
+```
