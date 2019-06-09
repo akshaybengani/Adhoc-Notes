@@ -296,8 +296,63 @@ Jun 09 06:15:23 ip-172-31-9-238.ap-south-1.compute.internal systemd[1]: Started 
 *   So we have code in our github and we can clone that code in ```/var/www/html/```
 *   Now by default we dont have git installed so install git ```yum install git```
 *   Now clone the webpage you want and just use the folder path and run that.
-*   
 
+## File Handling in Python
+There are some operations we perform in file handling.
+*   create
+*   delete
+*   rename
+*   store
+*   permission
+*   Copy
+*   Cut
+*   blank
+
+### Example code to search time functions in time liberary
+```py
+import time
+x=[]
+for i in dir(time):
+    if 'time' in i:
+        x.append(i)
+```
+```
+y = [i for in dir(name) if 'time' in i]
+```
+```
+import os
+[j for j in dir(os) if 'dir' in j]
+```
+```
+os.mkdir('hellololllloooo)
+os.rmdir('ubfibjv)
+```
+```chdir``` it means ```cd```
+```curdir``` it means ```pwd```
+```chmod``` it means ```chmod```
+```mkdir``` it means ```mkdir```
+
+* To open a file we have a function ```open()```
+```py
+f = open('hello.txt','w')
+```
+*   To write a file we have a function ```write()``` in python call this will file handle.   
+```
+f = open('hello.txt','w')
+f.write("Hello world this is file writer")
+```
+*   To close a file we have
+```
+f = open('hello.txt','w')
+f.write("Hello world this is file writer")
+f.close()
+```
+*   To apply both ```read``` and ```write``` operations we use ```w+``` 
+*   When we write or read something python cursor shifts.
+*   To fix this issue we have a function ```seek()``` this is used to get the curson position by entering the integer value of the position
+*   To open a file in append mode use the mode ```a``` while opening the file.
+    *   Since this is to add the data you cannot read the data.
+*   To perform both read and write operations then use ```a+``` to perform read and write operations.
 
 
 
