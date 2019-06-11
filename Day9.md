@@ -10,6 +10,18 @@
 *   Smallest LXC ever created is 1.84KB which gives result of Hello World.
 *   RHEL8 introduces Podman (Platform product) and Buildah (Backend Support).
 *   In RHEL7.5 or Ubuntu it is called Docker.
+*   Port number is used to specify to which program the connection have to communicate.
+*   Port Range starting from 0-65535.
+*   SSH port no 22
+*   http port no 80
+*   Port number is of 2 bytes.
+*   https port no 443
+*   UDP is the most used protocol over internet.
+*   Main examples of UDP are DNS, Video Streaming, DHCP
+*   http and https works on TCP
+*   Broadcast means Single sender all reciever.
+*   Unicast meanle Single sender single reciever
+*   Multicast means single sender multiple reciever but not all.
 
 ## LVM (Logical Volume Management)
 *   It is used to connect multiple hard disks and manage volumes.
@@ -87,6 +99,8 @@ baseurl=http://13.234.66.67/summer19/kubernetes
 gpgcheck=0
 ```
 *   Install docker using ```yum install docker```
+## Python Data Streaming
+
 
 
 
