@@ -99,4 +99,26 @@ docker exec -it Akshayc1 bash
 ``` 
 *   We can use internet in docker container also install ping using yum
 *   ping command includes in iputils
-*   
+*   To delete an image from docker liberary we have command ```docker rmi DOCKER_IMAGE_```
+```
+docker rmi docker.io/python
+```
+*   To delete a container we use ```docker rm CONTAINER_ID``` 
+```
+docker rm 3346e5f5280c
+```
+*   To delete all the containers in one run
+```
+docker rm $(docker ps -qa)
+```
+*    To create n number of docker containers we can use shell scripting loop
+```
+for((i=1;i<100;i++))
+do
+docker run fedora
+done
+```
+*   To get the continer IP use this command
+```
+docker inspect CONTAINER_NAME | grep -i ipadd
+```
