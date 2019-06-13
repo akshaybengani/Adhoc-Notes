@@ -2,7 +2,7 @@ wordCount = 0
 lineCount = 0
 charCount = 0
 
-print("Enter input type 'done' to finish\n")
+print("Enter input \nType 'done' to end\n")
 
 while True:
     line = input()
