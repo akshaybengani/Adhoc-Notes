@@ -26,7 +26,8 @@ http://www.akshaybengani.github.io
 
 ## Install Shellinabox
 *   It is a program which allows us to use shell in our browser insteed of a ssh or a putty.
-*   
+*   Download shell in a box from from[here](https://centos.pkgs.org/7/epel-x86_64/shellinabox-2.20-5.el7.x86_64.rpm.html)
+*  Download the binary file in AWS using wget or use ```rpm -ivh link```
 *   
 
 ## Docker Basics
@@ -63,6 +64,7 @@ docker run -it fedora date
 ```
 *   ```i``` stands here for interactive
 *   ```t``` stands here for terminal
+*   ```d``` stands here for detach
 *   ```date``` stands here for the application program date.
 *   To know how many docker containers exist in current time either in shutdown or running we have a command called ```docker ps -a```
 *   Docker is a process maintainer it can run that single process only.
@@ -110,6 +112,16 @@ docker rm 3346e5f5280c
 *   To delete all the containers in one run
 ```
 docker rm $(docker ps -qa)
+```
+* To delete via a python program use this
+```py
+#!/usr/bin/python3
+import os
+print("Hello World")
+filehandle = open("dockerContainers.txt","r")
+for i in filehandle:
+        command = "docker rm "+i
+        os.system(command)
 ```
 *    To create n number of docker containers we can use shell scripting loop
 ```
