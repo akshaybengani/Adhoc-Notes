@@ -28,8 +28,78 @@ ansible localhost -m service -a "name=httpd state=started"
 *   ```src``` is used to specify where is the file in your base machine
 *   ```dest``` is used to specify where to put file in your destination machines.
 ```
- ansible localhost -m copy -a "src=index.html dest=/var/www/html"
+ansible localhost -m copy -a "src=index.html dest=/var/www/html"
 ```
 *   Since to do every task with specifying a command we can also use a playbook to specify all the commands.
 *   To write playbook in Ansible we use ```yaml``` file ```yet another markup language```
+*   Yaml programming language contains 3 components.
+    *   Target (Group)
+    *   Variable (Optional)
+    *   Tasks (Module)
+*   Playbook language
+```
+---
+ - hosts:  localhost # This is target
+   tasks:
+    - command: date
+    - shell: cal
+    - yum: name=httpd state=present
+```
+*   To check syntax error use this
+```
+ansible-playbook first.yaml --syntax-check
+```
+* To run the playbook use the command
+```
+playbooks]# ansible-playbook first.yaml
+```
+```
+---
+ - hosts: a # This is target
+   remote_user: ec2-user
+   tasks:
+    - command: date
+    - shell: cal
+    - yum: name=httpd state=present
+```
+*   To give a name or desciption specified for the command use ```- name``` 
+```
+---
+ - hosts: localhost # This is target
+   tasks:
+    - name: running date command
+      command: date
+    - name: install httpd software
+      yum: name=httpd state=installed
+```
+*    To learn more about a module use this command
+```
+ansible-doc yum
+```
+*   You can also write your anible code like this, this is a new format.
+```
+---
+ - hosts: localhost # This is target
+   tasks:
+    - name: running date command
+      command: date
+    - name: install httpd software
+      yum:
+       name=httpd
+       state=installed
+```
+*   To know how many modules are there in ansible
+```
+ansible-doc -l
+```
+*   To count number of packages just by number you can use pipe and wc
+```
+ansible-doc -l | wc -l
+```
+# Python Class
+* Functions are used to reuse code.
+* To create a function we use the keyword ```def```
+* To call a function we write the function name with ()
+* For more information about functions [click here](https://github.com/akshaybengani/Python-tutorials#functions-in-python)
+* 
 
