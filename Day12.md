@@ -49,4 +49,12 @@ ansible a -u ec2-user -m ping -k
 *   ```-m``` is used for importing a python module and here we are using ```ping```
 *   ```-k``` is used for defining SSH Password
 
+## Generating your own Keys
+*   Generate keys using ```ssh-keygen```
+```
+ssh-copy-id ec2-user@13.234.48.87
+```
+*   Now enter password of the machine and the public key is sent to machine2.
+*   mod-ssl is used to setup website https
+
 
