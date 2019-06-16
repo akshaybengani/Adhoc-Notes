@@ -42,10 +42,15 @@ whereis /*nfs
 /var/lib/nfs/xtab
 ```
 *   Now we need to create a configuration file in ```/etc/exports``` so we have created a configuration file called exports
+*   change folder permissions
+```
+chmod 757 /nfs/
+```
 ```
 /nfs *(ro)
 ```
 *   Now run these
+*   ```exportfs -r``` is used to reload the ```exports``` configuration
 ```
 exportfs -r
 showmount -e 172.31.45.242
@@ -53,4 +58,34 @@ systemctl status firewalld.target
 systemctl status iptables.service
 systemctl restart nfs
 iptables -F
+```
+*   iptables works at the backend of the firewall configuration.
+*   To force allow everything to iptables we use
+```
+iptables -F
+```
+*   This command will turn SELinux off.
+```
+setenforce 0
+setenforce: SELinux is disabled
+```
+*   Now we need to mount the ip address
+```
+mkdir /mnt/mynfs
+mount 172.31.45.242:/nfs /mnt/mynfs
+```
+*   This is used to give root access to the user who is using the NFS system.
+```
+/nfs *(rw,no_root_squash)
+```
+*   Now we need to entry in fstab
+*   ```_netdev``` is used to specify that mount this device when you get networkIP, so that while in boot time this entry don't get crashed.
+*   So first we will get systemIP then we will mount to the nfs drive.
+```
+vi /etc/fstab
+172.131.45.242:/nfs /mnt/nfs/   nfs  _netdev 0 0
+```
+*   Check this before you restart.
+```
+mount -a
 ```
