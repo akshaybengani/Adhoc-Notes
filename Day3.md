@@ -27,7 +27,6 @@ BUG_REPORT_URL="https://bugs.kali.org/"
 ### Redhat system information
 ```
 cat /etc/os-release
-
 ```
 This is similar to fedora distribution
 
@@ -41,7 +40,6 @@ echo $PATH
 To  get the value we use a command ```which``` for getting path of a command.
 ```
 which python
-
 ```
 ### Input output devices
 Input devices are the devices where we can give input to the computer in any form by touch, click, key press etc
