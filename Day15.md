@@ -66,10 +66,49 @@
     *   AMI (Amazon Machine Image) These are the operating system images which Amazon provide us.
     *   VPC (Virtual Private Cloud) It gives us Networking Interface and Firewall Configuration.
     *   Boot Straping in EC2 to plan something for automation like something installation or host a website or such.
-    
+## PHP Installation in AWS
+*   To install web server we use
+```
+yum install httpd
+systemctl start httpd
+systemctl enable httpd
+```
+*   To install php and restart httpd you can use
+```
+yum install php
+systemctl restart httpd
+```
+*   To change configuration files of httpd use.
+```
+vi /etc/httpd/conf/httpd.conf
+```
+*   To add your own virtual host add your ```IP Address``` and ```Host name``` in ```/etc/hosts``` file
+```html
+<virtualhost *:80>
+documentroot /var/www/adhoc
+servername adhoc.example.com
+</virtualhost>
+```
+*   Add this at the end of the file.
+*   Now add a Local DNS in your own system
+```
+[root@ip-172-31-44-37 adhoc]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost6 localhost6.localdomain6
+13.233.92.233 adhoc.example.com
+```
+*   Now if you want to access in your actual system then add this same entry in windows host file also.
+```
+C:\Windows\System32\drivers\etc\hosts
+```
+*   Now add the entry in that file using administrator permissions via cmd -> Notepad
+```
+13.233.92.233 adhoc.example.com
+```
+*   Now you can access ```adhoc.example.com``` in your windows system also.
 
 ## Tasks
-*   How many instance we can launch in a single shot in AWS
+*   How many instance we can launch in a single shot in AWS 
 *   What is Request Spot Instance
 *   Can we change Subnet Availability Zone after instance Launch.
 *   
