@@ -172,5 +172,4 @@ x.shape()
 *   To get specific number of rows we use slicing tool
 ```
 z[0:5]
-
 ```
