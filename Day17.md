@@ -30,7 +30,7 @@ label = ['apple','apple','orange','orange']
     Data Classifiers techniques for Supervised Learning
         *   KNN
         *   SVM
-        *   Decision
+        *   Decision Tree
         *   Naive Bagos
         *   Random Foresh
         *   Lion
@@ -41,5 +41,3 @@ label = ['apple','apple','orange','orange']
 ```
 pip3 install scikit-learn
 ```
-### Decision Tree Classifier for Supervised Learning.
-*   
