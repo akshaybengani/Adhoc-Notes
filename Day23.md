@@ -39,6 +39,23 @@ cgitb.enable()
 print("Content-type:text/html")
 print("")
 ```
+*   To get root access in CGI we have to make ```apache``` user as sudo user.
+*   To add apache as sudo user open the file in ```/etc/sudoers.d/90-cloud-init-users``` and this line in it.
+```
+apache ALL=(ALL) NOPASSWD:ALL
+```
+*   To use cgi-bin in Debian distribution like ubuntu you have to tell the apache to give access to cgi-bin.
+*   As such to enable cgi-bin use the command
+```
+a2enmod cgi
+```
+*   The default cgi-bin path in ubuntu is ```/usr/lib/cgi-bin```
+
+## Things to explore about OS
+*   Windows 2016 Server
+*   Redhat
+*   Ubuntu
+*   Open SUSE
 
 ## Using Subprocess module
 *   To run a linux or windows command in python we use subprocess.
