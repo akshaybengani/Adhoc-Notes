@@ -86,3 +86,14 @@ cur = connection.cursor()
 data = cur.execute("Select * from rtables")
 print(data)
 ```
+## Some ML Stuff
+```py
+while True:
+    status,img = cap.read()
+    cv2.imshow("window 1",img)
+    if cv2.waitKey(20) == 13:   # This shit 10 is 10 milliseconds
+        break
+
+cv2.destroyAllWindows()
+cap.release()
+```
