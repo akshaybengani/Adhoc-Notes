@@ -15,3 +15,4 @@ Steps of creating a neural network
 *   When the ouput is not totally accurate after the number of EPOCH then it will take the output of the last EPOCH result.
 ## Rules Tips
 *   Whenever we have to deal with neural networks we must need to apply feature scaling to the dataset.
+i
